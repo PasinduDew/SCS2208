@@ -1,15 +1,14 @@
 <?php
 
-    class Admin extends CI_Controller{
+    class Admin extends CL_Controller{
+
+
 
         public function index(){
 
 
-            $this -> load -> view('Admin/AdminDashboard');
+            
         }
-
-        
     }
-
 
 ?>
