@@ -7,7 +7,7 @@
             // Executing the Parent`s Constructor
             parent:: __construct();
 
-            // Loading Necessary Liabries and Models
+            // Loading Necessary Liabries, Helpers and Models
             $this->load->model('admin_model');
             $this->load->helper('url_helper');
             $this->load->helper(array('form', 'url'));
@@ -91,6 +91,7 @@
             $data['page_title'] = 'Add New Addministrator';
 
             $this -> load -> helper('url'); // To Use the base_url() Function in View
+
             $this -> load -> view('Admin/Dashboard_Header', $data);
             $this -> load -> view('Admin/Add_Admin', array('error' => ' ' ));
             $this -> load -> view('Admin/Dashboard_Footer');
@@ -149,6 +150,7 @@
             }
             
             $this->admin_model->setAdmin($image_path);
+            // Redirecting the Page to Admin
             redirect('admin');
                 
         }
