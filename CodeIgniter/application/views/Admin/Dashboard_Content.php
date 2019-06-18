@@ -1,61 +1,48 @@
-<!-- Your content goes here -->
-<main class="mdl-layout__content">
-    <div class="page-content content">
 
-    <div class="bread">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb" style="margin-top: 50px;">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active"><a href="#">Dashboard</a></li>
-            
-        </ol>
-    </nav>
-    </div>    
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
 
-    <div class="t-body">
+        <nav aria-label="breadcrumb px-xs-5">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?= site_url('/')?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">View All</li>
+            </ol>
+        </nav>
 
-            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                
-                <tbody>
+        <!-- Page Content Begins From Here -->
+        <div class="row pl-3 pl-sm-2 pl-lg-5 pl-md-" style="">
 
-                <?php foreach ($admins as $admin_profile): ?>
+        <?php foreach ($admins as $admin_profile): ?>
 
-                    <!-- <p><a href="<?php echo site_url('news/'.$news_item['slug']); ?>">View article</a></p> -->
-                
-                    <div class="dash-card float-left">
-                    <div class="demo-card-square mdl-card mdl-shadow--2dp" >
-                        
-                        <div class="card-bg">
+           <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4" style="width: 18rem;display:inline-block; height: 300px;">
+                <div class="card" style="width: 18rem; height: 300px;">
+                    <img src="<?= base_url() . $admin_profile['imageurl']?>" class="card-img-top rounded-circle mx-auto d-block my-3" alt="Admin Profile Picture" style="width: 100px; height: 100px;">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><?= $admin_profile['designation'] ;?></h5>
+                        <p class="card-text text-center"><?= $admin_profile['firstname'] . " " .$admin_profile['lastname'] ;?></p>
+                        <hr class="sidebar-divider">
+						<a href="<?php echo site_url('Admin/viewProfile/'.$admin_profile['id']); ?>" class="btn btn-primary mr-0">Visit Profile</a>
+						<!-- <div class="" style="display: inline-block; width: 20px; background-color: blue;"></div> -->
+						<div class="" style="display: inline-block; width: 54%;">
+							<a href="<?php echo site_url('Admin/deleteAdmin/'.$admin_profile['id']); ?>" onclick="return confirm('Are Your Sure?')" class="justify-content-end" style="margin-left: 105px;"><span class="my-auto py-auto ml-0" style="font-size: 20px; color: red;"><i class="fas fa-trash-alt fa-lg fa-fw mr-2"></i></span></a>
 
-                            <img src="<?= base_url() . $admin_profile['imageurl']?>" class="img-card" alt="User Image">
+						</div>
 
-                            <div class="mdl-card__title mdl-card--expand" style=" margin-top: 240px; margin-bottom: 0px;">
-                                <h2 class="mdl-card__title-text"><?= $admin_profile['designation'] ;?> </h2>
-                            </div>
-                        </div>
-                        
-                        <div class="mdl-card__supporting-text">
-                            <?= $admin_profile['firstname'] . " " .$admin_profile['lastname'] ;?>
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            
-                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect a-tag" href="<?php echo site_url('Admin/viewProfile/'.$admin_profile['id']); ?>">View Profile</a>
-                        </div>
                     </div>
-                    </div>
+                </div>
+           </div>
 
-                <?php endforeach; ?>
-
+        <?php endforeach; ?>   
             
-            </tbody>
-        </table>
+        
+        </div>
+
     </div>
-    <div class="fab-dash container">
-        <!-- Colored FAB button with ripple -->
-        <a href="<?php echo site_url('Admin/addAdmin') ?>">
-            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-color--indigo-400" style="float: right;">
-            <i class="material-icons">add</i>
-            </button>
-        </a>
-    </div>
-</main>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+      
