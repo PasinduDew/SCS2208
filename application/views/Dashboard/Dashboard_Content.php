@@ -29,6 +29,7 @@
 			<h5 class="card-title m-3">New Messages</h5>
 				<div class="card-body">
 				<h2 class="">10</h2>
+				<p> This is the new messages section </p>
 				<a href="" class="btn btn-primary"> View Messages</a>
 				</div>
 			</div>
