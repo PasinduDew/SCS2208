@@ -32,6 +32,11 @@
 					<label for="lname">Last Name</label>
 					<input type="text" class="form-control" id="lname" name="lname" placeholder="Doe" value="<?= $admin['lastname'];?>" required>
 					</div>
+                    <div>
+                    <p>
+                        Welcome to edit Profile view
+                    </p>
+                    </div>
 				</div>
 				<div class="form-group">
 					<label for="dob">Date of Birth</label>
