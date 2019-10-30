@@ -8,7 +8,7 @@
     <div class="pimg2">
         <div class="ptext">
             <span class="border">
-                Image Two Text
+                Description for the Image 2
             </span>
         </div>
     </div>
@@ -23,7 +23,7 @@
     <div class="pimg3">
         <div class="ptext">
             <span class="border">
-                    Image Three Text
+                    Description for the Image 3
             </span>
         </div>
     </div>
