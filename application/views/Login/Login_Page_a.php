@@ -29,11 +29,13 @@
 					<div class="form-label-group">
 						<input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus value="<?= $user['email']?>">
 						<label for="inputEmail">Email address</label>
+						<P>This is the email field</P>
 					</div>
 
 					<div class="form-label-group">
 						<input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" value="<?= $user['password']?>" required>
 						<label for="inputPassword">Password</label>
+						<p>This is the password field</p>
 					</div>
 
 					<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Log in</button>
