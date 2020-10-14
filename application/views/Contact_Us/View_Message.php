@@ -20,18 +20,22 @@
 		
 		<div class="form-group col-lg-6">
 			<label for="exampleFormControlInput1">Sender Name</label>
+			<p>This is sender name section</p>
 			<input type="text" class="form-control" id="" placeholder="" value="<?= $message['sender_name']?>" readonly>
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="exampleFormControlInput1">Email address</label>
+			<p>This is email address section section</p>
 			<input type="email" class="form-control" id="" placeholder="" value="<?= $message['sender_email']?>" readonly>
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="exampleFormControlInput1">Mobile</label>
+			<p>This is mobile section</p>
 			<input type="email" class="form-control" id="" placeholder="" value="<?= $message['mobile']?>" readonly>
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="exampleFormControlInput1">Date Received</label>
+			<p>This is data received section section</p>
 			<input type="email" class="form-control" id="" placeholder="" value="<?= $message['date']?>" readonly>
 		</div>
 
